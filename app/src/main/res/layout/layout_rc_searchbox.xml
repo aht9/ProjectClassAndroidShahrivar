@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_edsearch">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_movie_search"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/pic_movie"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_margin="12dp"/>
+
+    <TextView
+        android:id="@+id/txt_name_movie_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title : No Data Available"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/four"
+        android:maxLines="1"
+        android:maxLength="25"
+        app:layout_constraintBottom_toBottomOf="@+id/img_movie_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_movie_search"
+        app:layout_constraintTop_toTopOf="@+id/img_movie_search"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0.1"/>
+
+    <TextView
+        android:id="@+id/txt_year_movie_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year : No Data Available"
+        android:textColor="@color/six"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_movie_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txt_name_movie_search"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_movie_search"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias=".1"/>
+
+    <TextView
+        android:id="@+id/txt_type_movie_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type : No Data Available"
+        android:textColor="@color/seven"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_movie_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txt_year_movie_search"
+        app:layout_constraintTop_toBottomOf="@+id/txt_year_movie_search"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

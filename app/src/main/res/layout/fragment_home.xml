@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeFragment"
+    android:background="@drawable/bg_home">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".05">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/pic_profile"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias=".92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_welcome_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello AmirHossein!"
+            android:textColor="@color/four"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/profile_image"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profile_image"
+            app:layout_constraintVertical_bias="0.3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Your Favorite Movie"
+            android:textColor="@color/two"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/txt_welcome_message"
+            app:layout_constraintTop_toBottomOf="@+id/txt_welcome_message" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/txt_search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:paddingEnd="10dp"
+        android:paddingStart="20dp"
+        android:textColor="@color/four"
+        android:hint="Search"
+        android:textColorHint="@color/two"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:maxLength="100"
+
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:drawableEnd="@drawable/ic_search_24"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias=".01"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_edsearch"/>
+
+    <TextView
+        android:id="@+id/lbl_feature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feature"
+        android:textColor="@color/four"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_search"
+        app:layout_constraintVertical_bias=".1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Movie"
+        android:textColor="@color/four"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lbl_feature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toEndOf="@+id/lbl_feature"
+        app:layout_constraintTop_toTopOf="@+id/lbl_feature" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_feature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_feature"
+        app:layout_constraintVertical_bias=".1"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
